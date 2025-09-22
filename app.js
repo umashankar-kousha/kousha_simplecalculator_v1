@@ -28,11 +28,19 @@ function onCubeButtonClick() {
   }
 }
 
-displayEl.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
 
     onEquallButtonClick();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    event.preventDefault();
+
+    onClearButtonClick();
   }
 });
 
@@ -41,6 +49,12 @@ function onEquallButtonClick() {
   let start = inputValidation(displayEl.value[0]);
   if (start || end) {
     alert("Error:Please give valid format");
+  } else if (displayEl.value[0] == "0") {
+    let val1 = displayEl.value.slice(1);
+
+    let result = eval(val1);
+    displayEl.value = val1;
+    displayResultEl.value = result;
   } else {
     let result = eval(displayEl.value);
     displayResultEl.value = result;
