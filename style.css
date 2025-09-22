@@ -15,6 +15,8 @@
   outline: none;
   height: 40px;
   text-align: right;
+  padding: 5px;
+  font-weight: 700;
 }
 
 .button {
@@ -22,4 +24,14 @@
   margin-bottom: 5px;
   margin-right: 5px;
   border-radius: 15px;
+  font-weight: 500;
+}
+
+.orange {
+  color: #fa7602;
+}
+
+.equal-button {
+  color: #ffffff;
+  background-color: #fa7602;
 }
