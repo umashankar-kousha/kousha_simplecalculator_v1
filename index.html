@@ -22,30 +22,67 @@
       class="calculator-container container d-flex flex-row justify-content-center align-items-center"
     >
       <div class="calculator shadow-lg mb-5 bg-body rounded">
-        <input type="text" class="input w-100" />
+        <input type="text" value="" class="input w-100" id="display" />
+        <input type="text" value="0" class="input w-100" id="displayResult" />
         <div
           class="btn-container d-flex flex-row justify-content-around align-items-stretch pt-3 flex-wrap"
         >
           <button class="btn btn-light button">X<sup>2</sup></button>
           <button class="btn btn-light button">X<sup>3</sup></button>
-          <button class="btn btn-light button">%</button>
-          <button class="btn btn-light button">/</button>
-          <button class="btn btn-light button">7</button>
-          <button class="btn btn-light button">8</button>
-          <button class="btn btn-light button">9</button>
-          <button class="btn btn-light button">X</button>
-          <button class="btn btn-light button">4</button>
-          <button class="btn btn-light button">5</button>
-          <button class="btn btn-light button">6</button>
-          <button class="btn btn-light button">-</button>
-          <button class="btn btn-light button">1</button>
-          <button class="btn btn-light button">2</button>
-          <button class="btn btn-light button">3</button>
-          <button class="btn btn-light button">+</button>
-          <button class="btn btn-light button">C</button>
-          <button class="btn btn-light button">0</button>
-          <button class="btn btn-light button">.</button>
-          <button class="btn btn-light button">=</button>
+          <button class="btn btn-light button" onclick="onButtonClick('%')">
+            %
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick('/')">
+            /
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(7)">
+            7
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(8)">
+            8
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(9)">
+            9
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick('*')">
+            X
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(4)">
+            4
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(5)">
+            5
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(6)">
+            6
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick('-')">
+            -
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(1)">
+            1
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(2)">
+            2
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(3)">
+            3
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick('+')">
+            +
+          </button>
+          <button class="btn btn-light button" onclick="onClearButtonClick(4)">
+            C
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick(0)">
+            0
+          </button>
+          <button class="btn btn-light button" onclick="onButtonClick('.')">
+            .
+          </button>
+          <button class="btn btn-light button" onclick="onEquallButtonClick()">
+            =
+          </button>
         </div>
       </div>
     </div>
@@ -59,5 +96,6 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script src="./app.js"></script>
   </body>
 </html>
